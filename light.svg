@@ -2,9 +2,7 @@
 fill="none"
 xmlns="http://www.w3.org/2000/svg">
 
-
 <defs>
-
 
 <!-- Light Background -->
 
@@ -18,7 +16,6 @@ y2="610">
 
 <stop offset="100%" stop-color="#F8FAFC"/>
 
-
 <animate
 attributeName="x1"
 values="0;200;0"
@@ -26,7 +23,6 @@ dur="12s"
 repeatCount="indefinite"/>
 
 </linearGradient>
-
 
 
 <!-- Accent Gradient -->
@@ -37,19 +33,11 @@ y1="0"
 x2="1"
 y2="1">
 
+<stop offset="0%" stop-color="#2563EB"/>
 
-<stop offset="0%"
-stop-color="#2563EB"/>
+<stop offset="50%" stop-color="#06B6D4"/>
 
-
-<stop offset="50%"
-stop-color="#06B6D4"/>
-
-
-<stop offset="100%"
-stop-color="#10B981"/>
-
-
+<stop offset="100%" stop-color="#10B981"/>
 
 <animate
 attributeName="x1"
@@ -57,32 +45,22 @@ values="0;1;0"
 dur="8s"
 repeatCount="indefinite"/>
 
-
 </linearGradient>
-
 
 
 <!-- ASCII Gradient -->
 
-<linearGradient
-id="asciiGradient"
+<linearGradient id="asciiGradient"
 x1="0"
 y1="0"
 x2="1"
 y2="1">
 
+<stop offset="0%" stop-color="#2563EB"/>
 
-<stop offset="0%"
-stop-color="#2563EB"/>
+<stop offset="50%" stop-color="#06B6D4"/>
 
-
-<stop offset="50%"
-stop-color="#06B6D4"/>
-
-
-<stop offset="100%"
-stop-color="#10B981"/>
-
+<stop offset="100%" stop-color="#10B981"/>
 
 <animate
 attributeName="x1"
@@ -90,32 +68,24 @@ values="0;1;0"
 dur="6s"
 repeatCount="indefinite"/>
 
-
 </linearGradient>
 
 
+<!-- Border Gradient -->
 
-
-<!-- Border -->
-
-<linearGradient
-id="borderGradient">
-
+<linearGradient id="borderGradient">
 
 <stop offset="0%"
 stop-color="#2563EB"
 stop-opacity="0.15"/>
 
-
 <stop offset="50%"
 stop-color="#06B6D4"
 stop-opacity="0.8"/>
 
-
 <stop offset="100%"
 stop-color="#10B981"
 stop-opacity="0.15"/>
-
 
 <animate
 attributeName="x1"
@@ -123,63 +93,45 @@ values="0;1;0"
 dur="5s"
 repeatCount="indefinite"/>
 
-
 </linearGradient>
-
-
 
 
 <!-- Background Glows -->
 
-
-<radialGradient
-id="blueGlow">
-
+<radialGradient id="blueGlow">
 
 <stop offset="0%"
 stop-color="#3B82F6"
 stop-opacity="0.18"/>
 
-
 <stop offset="100%"
 stop-color="#3B82F6"
 stop-opacity="0"/>
 
-
 </radialGradient>
 
 
-
-<radialGradient
-id="cyanGlow">
-
+<radialGradient id="cyanGlow">
 
 <stop offset="0%"
 stop-color="#06B6D4"
 stop-opacity="0.15"/>
 
-
 <stop offset="100%"
 stop-color="#06B6D4"
 stop-opacity="0"/>
 
-
 </radialGradient>
 
 
-
-
-<!-- Filters -->
-
+<!-- Glass Blur -->
 
 <filter id="glassBlur">
-
-<feGaussianBlur
-stdDeviation="18"/>
-
+<feGaussianBlur stdDeviation="18"/>
 </filter>
 
 
+<!-- Glow -->
 
 <filter id="glow">
 
@@ -187,37 +139,12 @@ stdDeviation="18"/>
 stdDeviation="5"
 result="blur"/>
 
-
 <feMerge>
-
 <feMergeNode in="blur"/>
-
 <feMergeNode in="SourceGraphic"/>
-
 </feMerge>
 
-
 </filter>
-
-
-
-<filter id="noise">
-
-
-<feTurbulence
-type="fractalNoise"
-baseFrequency="0.7"
-numOctaves="2"/>
-
-
-<feBlend
-mode="soft-light"
-in="SourceGraphic"/>
-
-
-</filter>
-
-
 
 
 <!-- Clip -->
@@ -230,15 +157,8 @@ height="610"
 rx="32"/>
 
 </clipPath>
-
-
-
 </defs>
-
-
-
 <g clip-path="url(#mainClip)">
-
 
 
 <!-- Background -->
@@ -250,8 +170,7 @@ fill="url(#bgGradient)"/>
 
 
 
-<!-- Soft Floating Glows -->
-
+<!-- Floating Blue Glow -->
 
 <circle
 cx="150"
@@ -260,7 +179,6 @@ r="260"
 fill="url(#blueGlow)"
 filter="url(#glassBlur)">
 
-
 <animateTransform
 attributeName="transform"
 type="translate"
@@ -268,10 +186,11 @@ values="0 0;35 20;0 0"
 dur="14s"
 repeatCount="indefinite"/>
 
-
 </circle>
 
 
+
+<!-- Floating Cyan Glow -->
 
 <circle
 cx="950"
@@ -280,7 +199,6 @@ r="280"
 fill="url(#cyanGlow)"
 filter="url(#glassBlur)">
 
-
 <animateTransform
 attributeName="transform"
 type="translate"
@@ -288,18 +206,12 @@ values="0 0;-30 -20;0 0"
 dur="16s"
 repeatCount="indefinite"/>
 
-
 </circle>
 
 
 
-<!-- Noise -->
+<!-- Noise Removed For GitHub Compatibility -->
 
-<rect
-width="1180"
-height="610"
-opacity="0.035"
-filter="url(#noise)"/>
 
 <!-- Main Glass Container -->
 
@@ -311,13 +223,14 @@ height="546"
 rx="28"
 fill="#F8FAFC"
 fill-opacity="0.75"
-stroke="rgba(15,23,42,0.08)"
-stroke-width="1"
-/>
+stroke="#0F172A"
+stroke-opacity="0.08"
+stroke-width="1"/>
 
 
 
-<!-- Left Panel -->
+
+<!-- Left Glass Panel -->
 
 <rect
 x="55"
@@ -325,11 +238,10 @@ y="70"
 width="390"
 height="470"
 rx="24"
-fill="#F8FAFC"
+fill="#FFFFFF"
 fill-opacity="0.9"
 stroke="url(#borderGradient)"
 stroke-width="1.5">
-
 
 <animate
 attributeName="stroke-opacity"
@@ -350,18 +262,16 @@ y="70"
 width="655"
 height="470"
 rx="24"
-fill="#F8FAFC"
+fill="#FFFFFF"
 fill-opacity="0.95"
 stroke="url(#borderGradient)"
 stroke-width="1.5">
-
 
 <animate
 attributeName="stroke-opacity"
 values="0.5;1;0.5"
 dur="5s"
 repeatCount="indefinite"/>
-
 
 </rect>
 
@@ -375,20 +285,18 @@ d="M70 90 H1080 Q1110 90 1110 120 V160 H70Z"
 fill="#FFFFFF"
 opacity="0.55">
 
-
 <animate
 attributeName="opacity"
 values="0.3;0.7;0.3"
 dur="6s"
 repeatCount="indefinite"/>
 
-
 </path>
 
 
 
 
-<!-- Border Shimmer -->
+<!-- Animated Border -->
 
 <rect
 x="32"
@@ -401,23 +309,17 @@ stroke="url(#accentGradient)"
 stroke-width="2"
 stroke-dasharray="120 800">
 
-
 <animate
 attributeName="stroke-dashoffset"
 values="0;920"
 dur="8s"
 repeatCount="indefinite"/>
 
-
 </rect>
 
-
-
-
-<!-- Scanline -->
+<!-- Scanline Layer -->
 
 <g opacity="0.08">
-
 
 <rect
 x="0"
@@ -426,13 +328,11 @@ width="1180"
 height="3"
 fill="#2563EB">
 
-
 <animate
 attributeName="y"
 values="-50;650"
 dur="5s"
 repeatCount="indefinite"/>
-
 
 </rect>
 
@@ -444,16 +344,13 @@ width="1180"
 height="1"
 fill="#06B6D4">
 
-
 <animate
 attributeName="y"
 values="-200;700"
 dur="7s"
 repeatCount="indefinite"/>
 
-
 </rect>
-
 
 </g>
 
@@ -462,10 +359,7 @@ repeatCount="indefinite"/>
 
 <!-- Floating Particles -->
 
-
-<g fill="#2563EB"
-filter="url(#glow)">
-
+<g fill="#2563EB" filter="url(#glow)">
 
 
 <circle
@@ -473,13 +367,11 @@ cx="95"
 cy="150"
 r="2">
 
-
 <animate
 attributeName="cy"
 values="150;120;150"
 dur="5s"
 repeatCount="indefinite"/>
-
 
 </circle>
 
@@ -490,13 +382,11 @@ cx="420"
 cy="430"
 r="1.5">
 
-
 <animate
 attributeName="cy"
 values="430;390;430"
 dur="6s"
 repeatCount="indefinite"/>
-
 
 </circle>
 
@@ -507,13 +397,11 @@ cx="720"
 cy="110"
 r="2">
 
-
 <animate
 attributeName="cy"
 values="110;150;110"
 dur="7s"
 repeatCount="indefinite"/>
-
 
 </circle>
 
@@ -524,13 +412,11 @@ cx="1060"
 cy="420"
 r="1.5">
 
-
 <animate
 attributeName="cy"
 values="420;380;420"
 dur="8s"
 repeatCount="indefinite"/>
-
 
 </circle>
 
@@ -540,7 +426,8 @@ repeatCount="indefinite"/>
 
 
 
-<!-- Terminal Header -->
+
+<!-- Terminal Top Bar -->
 
 <rect
 x="500"
@@ -552,7 +439,6 @@ fill="#E2E8F0"/>
 
 
 
-
 <!-- Terminal Dots -->
 
 <circle
@@ -561,13 +447,11 @@ cy="114"
 r="5"
 fill="#EF4444"/>
 
-
 <circle
 cx="545"
 cy="114"
 r="5"
 fill="#FACC15"/>
-
 
 <circle
 cx="565"
@@ -575,13 +459,16 @@ cy="114"
 r="5"
 fill="#22C55E"/>
 
+
+
+
+
 <!-- ASCII Portrait -->
 
-<g transform="translate(85 145)"
+<g
+transform="translate(85 145)"
 filter="url(#glow)">
 
-
-<!-- Floating Motion -->
 
 <g>
 
@@ -645,11 +532,7 @@ fill="freeze"/>
 
 </g>
 
-
-
-
-
-<!-- ASCII Scanline -->
+<!-- ASCII Scanlines -->
 
 <g opacity="0.12">
 
@@ -661,13 +544,11 @@ width="330"
 height="2"
 fill="#06B6D4">
 
-
 <animate
 attributeName="y"
 values="150;430"
 dur="4s"
 repeatCount="indefinite"/>
-
 
 </rect>
 
@@ -680,16 +561,13 @@ width="330"
 height="1"
 fill="#2563EB">
 
-
 <animate
 attributeName="y"
 values="180;450"
 dur="6s"
 repeatCount="indefinite"/>
 
-
 </rect>
-
 
 
 </g>
@@ -697,7 +575,8 @@ repeatCount="indefinite"/>
 
 
 
-<!-- Cursor -->
+
+<!-- ASCII Cursor -->
 
 <rect
 x="350"
@@ -707,13 +586,11 @@ height="18"
 rx="2"
 fill="#2563EB">
 
-
 <animate
 attributeName="opacity"
 values="1;0;1"
 dur="1s"
 repeatCount="indefinite"/>
-
 
 </rect>
 
@@ -721,7 +598,7 @@ repeatCount="indefinite"/>
 
 
 
-<!-- Left Information -->
+<!-- Left Side Label -->
 
 
 <text
@@ -748,6 +625,10 @@ font-size="12">
 &gt; building intelligent systems_
 
 </text>
+
+
+
+
 
 <!-- Terminal Content -->
 
@@ -798,7 +679,8 @@ I'm Tanishka Aggarwal
 
 
 
-<!-- Typing Titles -->
+<!-- Animated Titles -->
+
 
 <text
 x="520"
@@ -807,9 +689,7 @@ fill="url(#accentGradient)"
 font-size="17"
 font-weight="600">
 
-
 AI &amp; Machine Learning Explorer
-
 
 <animate
 attributeName="opacity"
@@ -817,7 +697,6 @@ values="0;1;1;0"
 keyTimes="0;0.1;0.9;1"
 dur="8s"
 repeatCount="indefinite"/>
-
 
 </text>
 
@@ -830,9 +709,7 @@ fill="url(#accentGradient)"
 font-size="17"
 font-weight="600">
 
-
 Full Stack Developer
-
 
 <animate
 attributeName="opacity"
@@ -840,7 +717,6 @@ values="1;0;0;1"
 keyTimes="0;0.1;0.9;1"
 dur="8s"
 repeatCount="indefinite"/>
-
 
 </text>
 
@@ -857,15 +733,14 @@ height="18"
 rx="2"
 fill="#06B6D4">
 
-
 <animate
 attributeName="opacity"
 values="1;0;1"
 dur="0.8s"
 repeatCount="indefinite"/>
 
-
 </rect>
+
 
 
 
@@ -883,7 +758,6 @@ y="345">
 
 📍 India
 
-
 <animate
 attributeName="opacity"
 values="0;1"
@@ -891,9 +765,7 @@ dur="1s"
 begin="1s"
 fill="freeze"/>
 
-
 </text>
-
 
 
 
@@ -903,7 +775,6 @@ y="375">
 
 🎓 B.Tech Artificial Intelligence &amp; Machine Learning
 
-
 <animate
 attributeName="opacity"
 values="0;1"
@@ -911,9 +782,7 @@ dur="1s"
 begin="2s"
 fill="freeze"/>
 
-
 </text>
-
 
 
 
@@ -923,7 +792,6 @@ y="405">
 
 🎯 ML • DL • NLP • GenAI • LLMs • Full Stack
 
-
 <animate
 attributeName="opacity"
 values="0;1"
@@ -931,9 +799,7 @@ dur="1s"
 begin="3s"
 fill="freeze"/>
 
-
 </text>
-
 
 
 
@@ -943,7 +809,6 @@ y="435">
 
 🌐 tanishka-portfolio-indol.vercel.app
 
-
 <animate
 attributeName="opacity"
 values="0;1"
@@ -951,9 +816,7 @@ dur="1s"
 begin="4s"
 fill="freeze"/>
 
-
 </text>
-
 
 
 
@@ -963,7 +826,6 @@ y="465">
 
 📧 tanishka.aggarwal1310@gmail.com
 
-
 <animate
 attributeName="opacity"
 values="0;1"
@@ -971,15 +833,10 @@ dur="1s"
 begin="5s"
 fill="freeze"/>
 
-
 </text>
 
 
 </g>
-
-
-
-
 
 <!-- Skills Title -->
 
@@ -996,12 +853,11 @@ TECH STACK
 
 
 
-
 <!-- Skill Pills -->
 
-<g font-size="12"
+<g
+font-size="12"
 font-weight="600">
-
 
 
 <!-- React -->
@@ -1015,7 +871,6 @@ rx="14"
 fill="#FFFFFF"
 stroke="#2563EB"/>
 
-
 <text
 x="535"
 y="544"
@@ -1024,7 +879,6 @@ fill="#0F172A">
 React
 
 </text>
-
 
 
 
@@ -1039,7 +893,6 @@ rx="14"
 fill="#FFFFFF"
 stroke="#06B6D4"/>
 
-
 <text
 x="610"
 y="544"
@@ -1048,7 +901,6 @@ fill="#0F172A">
 Python
 
 </text>
-
 
 
 
@@ -1063,7 +915,6 @@ rx="14"
 fill="#FFFFFF"
 stroke="#10B981"/>
 
-
 <text
 x="690"
 y="544"
@@ -1072,7 +923,6 @@ fill="#0F172A">
 GenAI
 
 </text>
-
 
 
 
@@ -1087,7 +937,6 @@ rx="14"
 fill="#FFFFFF"
 stroke="#2563EB"/>
 
-
 <text
 x="775"
 y="544"
@@ -1097,11 +946,6 @@ Node.js
 
 </text>
 
-<!-- More Skills -->
-
-<g font-family="Inter, Arial, sans-serif"
-font-size="12"
-font-weight="600">
 
 
 <!-- Tailwind -->
@@ -1115,16 +959,13 @@ rx="14"
 fill="#FFFFFF"
 stroke="#06B6D4">
 
-
 <animate
 attributeName="stroke-opacity"
 values="0.5;1;0.5"
 dur="3s"
 repeatCount="indefinite"/>
 
-
 </rect>
-
 
 <text
 x="868"
@@ -1149,7 +990,6 @@ rx="14"
 fill="#FFFFFF"
 stroke="#10B981"/>
 
-
 <text
 x="968"
 y="544"
@@ -1173,7 +1013,6 @@ rx="14"
 fill="#FFFFFF"
 stroke="#2563EB"/>
 
-
 <text
 x="1068"
 y="544"
@@ -1190,7 +1029,7 @@ Git
 
 
 
-<!-- Social Icons -->
+<!-- Social Footer -->
 
 <g transform="translate(520 575)">
 
@@ -1205,7 +1044,6 @@ r="16"
 fill="#FFFFFF"
 stroke="#2563EB"/>
 
-
 <text
 x="-7"
 y="5"
@@ -1219,7 +1057,6 @@ GH
 
 
 
-
 <!-- LinkedIn -->
 
 <circle
@@ -1228,7 +1065,6 @@ cy="0"
 r="16"
 fill="#FFFFFF"
 stroke="#06B6D4"/>
-
 
 <text
 x="45"
@@ -1243,7 +1079,6 @@ in
 
 
 
-
 <!-- Portfolio -->
 
 <circle
@@ -1252,7 +1087,6 @@ cy="0"
 r="16"
 fill="#FFFFFF"
 stroke="#10B981"/>
-
 
 <text
 x="99"
@@ -1267,7 +1101,6 @@ WEB
 
 
 
-
 <!-- Email -->
 
 <circle
@@ -1276,7 +1109,6 @@ cy="0"
 r="16"
 fill="#FFFFFF"
 stroke="#2563EB"/>
-
 
 <text
 x="157"
@@ -1287,7 +1119,6 @@ font-size="11">
 @
 
 </text>
-
 
 
 </g>
@@ -1305,9 +1136,7 @@ fill="#059669"
 font-size="12"
 font-family="monospace">
 
-
 ● Available for learning &amp; collaboration
-
 
 <animate
 attributeName="opacity"
@@ -1315,14 +1144,13 @@ values="0.4;1;0.4"
 dur="2s"
 repeatCount="indefinite"/>
 
-
 </text>
 
 
 
 
 
-<!-- Final Animated Border -->
+<!-- Final Border -->
 
 <rect
 x="32"
@@ -1335,20 +1163,15 @@ stroke="url(#accentGradient)"
 stroke-width="1"
 opacity="0.5">
 
-
 <animate
 attributeName="opacity"
 values="0.3;0.8;0.3"
 dur="6s"
 repeatCount="indefinite"/>
 
-
 </rect>
 
 
-
-
-</g>
 
 </g>
 
