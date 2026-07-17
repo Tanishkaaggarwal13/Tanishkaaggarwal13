@@ -658,7 +658,7 @@ fill="#0F172A"
 font-size="30"
 font-weight="700">
 
-Hi 👋
+Hi 
 
 </text>
 
@@ -756,7 +756,7 @@ fill="#475569">
 x="520"
 y="345">
 
-📍 India
+  India
 
 <animate
 attributeName="opacity"
@@ -773,7 +773,7 @@ fill="freeze"/>
 x="520"
 y="375">
 
-🎓 B.Tech Artificial Intelligence &amp; Machine Learning
+  B.Tech Artificial Intelligence &amp; Machine Learning
 
 <animate
 attributeName="opacity"
@@ -790,7 +790,7 @@ fill="freeze"/>
 x="520"
 y="405">
 
-🎯 ML • DL • NLP • GenAI • LLMs • Full Stack
+ ML • DL • NLP • GenAI • LLMs • Full Stack
 
 <animate
 attributeName="opacity"
@@ -807,7 +807,7 @@ fill="freeze"/>
 x="520"
 y="435">
 
-🌐 tanishka-portfolio-indol.vercel.app
+ tanishka-portfolio-indol.vercel.app
 
 <animate
 attributeName="opacity"
@@ -824,7 +824,7 @@ fill="freeze"/>
 x="520"
 y="465">
 
-📧 tanishka.aggarwal1310@gmail.com
+ tanishka.aggarwal1310@gmail.com
 
 <animate
 attributeName="opacity"
@@ -1136,7 +1136,7 @@ fill="#059669"
 font-size="12"
 font-family="monospace">
 
-● Available for learning &amp; collaboration
+ Available for learning &amp; collaboration
 
 <animate
 attributeName="opacity"
