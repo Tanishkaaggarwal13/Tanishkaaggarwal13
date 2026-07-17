@@ -252,6 +252,12 @@ Full Stack Developer
 </text>
 </g>
 
+   <text x="520" y="465">
+🔗 https://linkedin.com/in/tanishka-aggarwal-321634346 
+<animate attributeName="opacity" values="0;1" dur="1s" begin="5s" fill="freeze"/>
+</text>
+</g>
+
 <!-- Skills Title -->
 <text x="520" y="505" fill="#0F172A" font-size="15" font-weight="700">
 TECH STACK
